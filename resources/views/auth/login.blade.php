@@ -83,7 +83,7 @@
           <label for="password" class="block mb-1 font-medium text-white">Password</label>
           <input type="password" id="password" name="password" required
                  class="w-full px-4 py-2 rounded bg-white/80 text-gray-800 border focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
-                 placeholder="***********" />
+                 placeholder="*" />
         </div>
 
         <button type="submit"

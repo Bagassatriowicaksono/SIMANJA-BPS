@@ -316,6 +316,14 @@
                         <i class="fas fa-chart-bar mr-1"></i> Tampilkan Grafik
                     </button>
                 </div>
+
+                <!-- Search -->
+                <form method="GET" action="{{ route('superadmin.dashboard') }}" class="relative">
+                    <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama pegawai..."
+                        class="border border-gray-300 px-3 py-1 rounded text-sm placeholder-black" />
+                    <input type="hidden" name="bulan" value="{{ request('bulan') }}">
+                    <input type="hidden" name="tahun" value="{{ request('tahun') }}">
+                </form>
             </div>
 
             <!-- Tabel -->
@@ -416,7 +424,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: `Grafik Jumlah Kegiatan Pegawai (${labelBulanTahun})`
+                        text: Grafik Jumlah Kegiatan Pegawai (${labelBulanTahun})
                     },
                     legend: {
                         display: false
@@ -464,7 +472,7 @@
                     let rowData = [];
                     row.querySelectorAll('th, td').forEach(cell => {
                         let cellText = cell.innerText.replace(/"/g, '""'); // Escape quote
-                        rowData.push(`"${cellText}"`);
+                        rowData.push("${cellText}");
                     });
                     csvContent += rowData.join(",") + "\r\n";
                 });
@@ -537,7 +545,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: `Grafik Jumlah Bobot Pegawai (${labelBulanTahun})`
+                        text: Grafik Jumlah Bobot Pegawai (${labelBulanTahun})
                     },
                     legend: {
                         display: false
@@ -581,7 +589,7 @@
                     let rowData = [];
                     row.querySelectorAll('th, td').forEach(cell => {
                         let cellText = cell.innerText.replace(/"/g, '""');
-                        rowData.push(`"${cellText}"`);
+                        rowData.push("${cellText}");
                     });
                     csvContent += rowData.join(",") + "\r\n";
                 });
@@ -654,7 +662,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: `Grafik Nilai Kinerja Pegawai (${labelBulanTahun})`
+                        text: Grafik Nilai Kinerja Pegawai (${labelBulanTahun})
                     },
                     legend: {
                         display: false
@@ -698,7 +706,7 @@
                     let rowData = [];
                     row.querySelectorAll('th, td').forEach(cell => {
                         let cellText = cell.innerText.replace(/"/g, '""');
-                        rowData.push(`"${cellText}"`);
+                        rowData.push("${cellText}");
                     });
                     csvContent += rowData.join(",") + "\r\n";
                 });
@@ -756,7 +764,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: `Grafik Persentase Tugas Selesai (${labelBulanTahun})`
+                        text: Grafik Persentase Tugas Selesai (${labelBulanTahun})
                     },
                     legend: {
                         display: false
@@ -818,7 +826,7 @@
                     let rowData = [];
                     row.querySelectorAll('th, td').forEach(cell => {
                         let cellText = cell.innerText.replace(/"/g, '""');
-                        rowData.push(`"${cellText}"`);
+                        rowData.push("${cellText}");
                     });
                     csvContent += rowData.join(",") + "\r\n";
                 });
