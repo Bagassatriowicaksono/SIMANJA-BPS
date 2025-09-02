@@ -9,6 +9,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('favicon_abstrak.png') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon_abstrak.ico') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+
 
     <!-- Tailwind CSS & Alpine.js -->
     <script src="https://cdn.tailwindcss.com"></script>
