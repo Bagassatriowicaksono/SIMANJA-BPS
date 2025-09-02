@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('favicon_abstrak.png') }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon_abstrak.ico') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
 
