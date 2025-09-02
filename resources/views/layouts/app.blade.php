@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Tailwind CSS & Alpine.js -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,5 +28,22 @@
 </head>
 
 <body class="h-full" x-data="userModal()">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navbar / Header -->
+        <header class="bg-white shadow p-4">
+            <h1 class="text-xl font-bold text-gray-800">WOLA Panel</h1>
+        </header>
+
+        <!-- Konten utama -->
+        <main class="flex-1 p-6">
+            @yield('content')
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-200 p-4 text-center text-sm text-gray-600">
+            &copy; {{ date('Y') }} WOLA. All rights reserved.
+        </footer>
+    </div>
 </body>
+
 </html>
